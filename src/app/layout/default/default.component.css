@@ -1,0 +1,32 @@
+.ant-layout {
+  height: 100%;
+}
+:host ::ng-deep .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+:host ::ng-deep .trigger:hover {
+  color: #1890ff;
+}
+
+:host ::ng-deep .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, .2);
+  margin: 16px;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 200px;
+  right: 0;
+
+  text-align: center;
+  padding: 15px ;
+}
+.ant-menu-horizontal{
+  display: inline-block;
+}
