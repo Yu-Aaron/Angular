@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {OverviewComponent} from './overview/overview.component';
 
 const routes: Routes = [
-  {path: 'overview', component: OverviewComponent}
+  {path: 'overview', component: OverviewComponent},
+  { path: '', redirectTo: '/pages/monitor/overview', pathMatch: 'full' }
 ];
 
 @NgModule({

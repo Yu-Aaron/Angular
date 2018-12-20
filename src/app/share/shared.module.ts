@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
+import { TransformFieldPipe } from './transform-field.pipe';
 
 @NgModule({
     exports: [
@@ -10,7 +11,7 @@ import {NgZorroAntdModule} from 'ng-zorro-antd';
         ReactiveFormsModule,
         NgZorroAntdModule
     ],
-    declarations: []
+    declarations: [TransformFieldPipe]
 })
 export class SharedModule {
 }

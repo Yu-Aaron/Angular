@@ -10,7 +10,8 @@ const routes: Routes = [
   {path: 'business', component: BusinessComponent},
   {path: 'device', component: DeviceComponent},
   {path: 'config', component: ConfigComponent},
-  {path: 'user', component: UserComponent}
+  {path: 'user', component: UserComponent},
+  { path: '', redirectTo: '/pages/system/user', pathMatch: 'full' }
 ];
 
 @NgModule({

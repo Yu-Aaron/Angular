@@ -30,3 +30,6 @@
 .ant-menu-horizontal{
   display: inline-block;
 }
+.ant-menu-item, .ant-menu-horizontal > .ant-menu-submenu {
+  outline: none;
+}

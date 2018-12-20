@@ -4,22 +4,28 @@
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
       <ng-container *ngFor="let menu of menuList">
-        <li nz-menu-item routerLink="./{{menu.options.url_state}}" (click)="changeMenu(menu.state)"><span><i nz-icon type="{{menu.icon}}"></i><span class="nav-text">{{menu.name}}</span></span></li>
+        <li nz-menu-item routerLink="./{{menu.state}}" routerLinkActive="ant-menu-item-selected"  (click)="changeMenu(menu.state)">
+          <span>
+            <i nz-icon type="{{menu.icon}}"></i>
+            <span class="nav-text">{{menu.name}}</span>
+          </span>
+        </li>
       </ng-container>
-
     </ul>
   </nz-sider>
   <nz-layout>
     <nz-header style="background: #fff; padding:0;">
       <i class="trigger" nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'" (click)="isCollapsed=!isCollapsed"></i>
       <ul nz-menu [nzMode]="'horizontal'">
-        <li nz-menu-item *ngFor="let menu of secondLevelMenu" routerLink="./{{currentMenu}}/{{menu.state}}">{{menu.name}}</li>
+        <li nz-menu-item *ngFor="let menu of secondLevelMenu" routerLink="./{{currentMenu}}/{{menu.state}}"  routerLinkActive="ant-menu-item-selected">{{menu.name}}</li>
       </ul>
     </nz-header>
     <nz-content style="margin:0 16px;">
       <nz-breadcrumb style="margin:16px 0;">
-        <nz-breadcrumb-item>User</nz-breadcrumb-item>
-        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+        <ng-container *ngFor="let item of routeData">
+          <nz-breadcrumb-item  *ngIf="item!='pages'&&item!=''">{{item | transformField: item}}</nz-breadcrumb-item>
+        </ng-container>
+
       </nz-breadcrumb>
       <div style="padding:24px; background: #fff; min-height: 360px;">
         Bill is a cat.

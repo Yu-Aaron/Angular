@@ -45,5 +45,6 @@ export class ConfigService {
     const url = `assets/jsons/conf.json`;
     return this.http.get(url);
   }
+
 }
 

@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: 'secincident', component: SecincidentComponent},
   {path: 'networksession', component: NetworksessionComponent},
   {path: 'protocol', component: ProtocolComponent},
-  {path: 'flow', component: FlowComponent}
+  {path: 'flow', component: FlowComponent},
+  { path: '', redirectTo: '/pages/security/secincident', pathMatch: 'full' }
 ];
 
 @NgModule({

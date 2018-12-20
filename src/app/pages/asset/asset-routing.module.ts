@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: 'securitydevice', component: SecuritydeviceComponent},
   {path: 'factorydevice', component: FactorydeviceComponent},
   {path: 'networkdevice', component: NetworkdeviceComponent},
+  { path: '', redirectTo: '/pages/asset/topology', pathMatch: 'full' }
 ];
 
 @NgModule({

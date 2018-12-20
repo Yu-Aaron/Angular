@@ -5,9 +5,10 @@ import { HeaderComponent } from './header/header.component';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
 import { DefaultComponent } from './default/default.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import {TransformFieldPipe} from '../share/transform-field.pipe';
 
 @NgModule({
-  declarations: [HeaderComponent, DefaultComponent, BreadcrumbComponent],
+  declarations: [HeaderComponent, DefaultComponent, BreadcrumbComponent, TransformFieldPipe],
   imports: [
     CommonModule,
     NgZorroAntdModule,
