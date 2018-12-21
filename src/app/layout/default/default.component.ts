@@ -21,7 +21,7 @@ export class DefaultComponent implements OnInit {
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         console.log(event);
-        this.routeData = event.url.split('/');
+        this.routeData = event.urlAfterRedirects.split('/');
         console.log(this.routeData);
         this.currentMenu = this.routeData[2];
         this.getMenu();
